@@ -76,20 +76,49 @@ let comidas =  [
 ];
 
 const container = document.getElementById('comidaContainer');
+const formComidaNueva = document.getElementById('agregarComida')
 
 
 let i = 0;
 
+
+/*function mostrarComidas(){
 while (i < comidas.length){
 
   container.innerHTML +=
   `
   <article class= "card">
   <h2 class= "comida">${comidas[i].nombre}</h2>
-  <p>${comidas[i].categoria}</p>
-  <p>${comidas[i].provincia}</p>
-  <p>Ingredientes:${comidas[i].ingredientes}</p>
+  <p class= "categoria">${comidas[i].categoria}</p>
+  <p class= "provincia">${comidas[i].provincia}</p>
+  <p class= "ingredientes">Ingredientes:${comidas[i].ingredientes}</p>
   </article>
   `
 i++
 }
+} */
+
+
+function mostrarComidasConForEach(){
+  comidas.forEach( comida => {
+    container.innerHTML += 
+  `
+    <article class= "card">
+       <p class= "categoria"><span class= "cat"> ${comida.categoria} </span></p>
+      <h2 class= "comida">${comida.nombre}</h2>
+      <p class= "provincia">${comida.provincia}</p>
+      <ul>
+      ${comida.ingredientes.map( ingrediente=> `<li>${ingrediente}</li>`)}
+    </article>
+  ` 
+  })
+}
+
+mostrarComidasConForEach()
+
+
+formComidaNueva.addEventListener("submit", (e) => {
+
+  alert("comida nueva recibida: " + e.target.nombre.value)
+
+})
