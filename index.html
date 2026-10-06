@@ -10,19 +10,27 @@
     <header>
       <!-- Para filtros y navegacion -->
     </header>
-
+    <section class="comidas">
     <main class="comida-container" id="comidaContainer">
         <!-- Contenido Dinamico -->
     </main>     
+  </section>
 
     <section class="addFood">
       <form id="agregarComida">
-        <label>Nombre de la comida</label>
-        <input type="text" placeholder="Nombre de la comida" name="nombre">
+        <label for="nombre">Nombre de la comida</label>
+        <input type="text" placeholder="Nombre de la comida" id="nombre" required>
+        <p></p>
 
-        <label>Categoria de la comida</label>
+        <label for="categoria">Categoria de la comida</label>
+        <input type="text" placeholder="Categoria de la comida" id="categoria" required>
+        <p></p>
         
+        <label for="provincia">Provincia de la comida</label>
+        <input type="text" placeholder="Provincia de la comida" id="provincia" required>
+        <p></p>
 
+       
         <button type="submit">Agregar comida</button>
 
       </form>
