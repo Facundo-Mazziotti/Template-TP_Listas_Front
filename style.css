@@ -7,8 +7,12 @@
 
 
 ul{
-  list-style-position: inside;
+  list-style: none;
   margin-left: 1vw;
+}
+ul li{
+  background-color: rgb(rgb(196, 183, 183));
+  
 }
 
 .comidas{
@@ -29,7 +33,7 @@ ul{
   height: auto;
   overflow-wrap: anywhere;
   background-color: white;
-  box-shadow: .1vw .2vh 1px #000000;
+  box-shadow: .1vw .2vh .1vh #000000;
   display: flex;
   margin: 1vw 1vh 1vw 1vh;
   flex-direction: column;
@@ -42,8 +46,6 @@ ul{
   font-size: 5vh;
   margin-top: 7vh;
   margin-left: .5vw;
-  
- 
 }
 
 .categoria{
@@ -74,4 +76,11 @@ ul{
   flex-direction: column;
   align-items: center;
   height: 20vh;
+  width: 100vw;
+  background-color: rgb(247, 242, 231);
+}
+
+.ingrediente{
+  background-color: rgb(rgb(196, 183, 183));
+
 }
