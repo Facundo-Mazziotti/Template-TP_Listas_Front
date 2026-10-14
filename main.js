@@ -17,24 +17,6 @@ let comidas = [];
 
 const container = document.getElementById('comidaContainer');
 
-let i = 0;
-
-/*function mostrarComidas(){
-while (i < comidas.length){
-
-  container.innerHTML +=
-  `
-  <article class= "card">
-  <h2 class= "comida">${comidas[i].nombre}</h2>
-  <p class= "categoria">${comidas[i].categoria}</p>
-  <p class= "provincia">${comidas[i].provincia}</p>
-  <p class= "ingredientes">Ingredientes:${comidas[i].ingredientes}</p>
-  </article>
-  `
-i++
-}
-} */
-
 function mostrarComidas(lista){
     container.innerHTML=""
   lista.forEach( comida => {
@@ -52,7 +34,6 @@ function mostrarComidas(lista){
   })
 }
 
-/*mostrarComidasConForEach() */
 
 const formComidaNueva = document.getElementById('agregarComida')
 
@@ -76,7 +57,7 @@ formComidaNueva.addEventListener("submit", (event) => {
 
 const buscador = document.getElementById("buscador")
 const filtroCategoria = document.getElementById("filtroCategoria")
-const filtroProvincia = document.getElementById("filtroProvincia")
+const filtroProvincia = document.getElementById("filtroProvincia") 
 
 function filtrar(){
   const comidasFiltradas = comidas.filter( comida => {
