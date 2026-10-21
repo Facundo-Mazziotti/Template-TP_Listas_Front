@@ -106,7 +106,7 @@ function actualizarFiltros(){
 filtroCategoria.innerHTML =  `<option value="">Todas las categorias</option>`
 filtroProvincia.innerHTML =  `<option value="">Todas las provincias</option>`
 
-filtroProvincia.innerHTML = `<option value="${provincia}">${provincia}</option>`
+
 
   let categorias = []
   let provincias = []
